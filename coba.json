@@ -1,0 +1,39 @@
+[
+    {  
+        "nama" : "Kucing",
+        "umur" : 1,
+        "hobby" : [
+            "Membaca",
+            "Menulis"
+        ],
+        "pembimbing" : {
+            "pembimbing 1" : "Doddy",
+            "pembimbing 2" : "Ferdi"
+        }
+    },
+    {  
+        "nama" : "Kucing",
+        "umur" : 1,
+        "hobby" : [
+            "Membaca",
+            "Menulis"
+        ],
+        "pembimbing" : {
+            "pembimbing 1" : "Doddy",
+            "pembimbing 2" : "Ferdi"
+        }
+    },
+    {  
+        "nama" : "Kucing",
+        "umur" : 1,
+        "hobby" : [
+            "Membaca",
+            "Menulis"
+        ],
+        "pembimbing" : {
+            "pembimbing 1" : "Doddy",
+            "pembimbing 2" : "Ferdi"
+        }
+    }
+
+]
