@@ -15,7 +15,7 @@ class Mahasiswa extends REST_Controller
     {
         parent::__construct();
         $this->load->model('Mahasiswa_model');
-        $this->methods['index_get']['limit'] = 2;
+        $this->methods['index_get']['limit'] = 1000;
     }
 
     public function index_get()
@@ -76,17 +76,16 @@ class Mahasiswa extends REST_Controller
             'jurusan' => $this->post('jurusan')
         ];
 
-        if ( $this->Mahasiswa_model->createMahasiswa($data) > 0)
-        {
+        if ($this->Mahasiswa_model->createMahasiswa($data) > 0) {
             $this->response([
-                    'status' => TRUE,
-                    'message' => 'new mahasiswa has been created'
-                ], REST_Controller::HTTP_CREATED);
+                'status' => TRUE,
+                'message' => 'new mahasiswa has been created'
+            ], REST_Controller::HTTP_CREATED);
         } else {
-             $this->response([
-                    'status' => FALSE,
-                    'message' => 'failed to create new data !'
-                ], REST_Controller::HTTP_BAD_REQUEST);
+            $this->response([
+                'status' => FALSE,
+                'message' => 'failed to create new data !'
+            ], REST_Controller::HTTP_BAD_REQUEST);
         }
     }
 
@@ -100,17 +99,16 @@ class Mahasiswa extends REST_Controller
             'jurusan' => $this->post('jurusan')
         ];
 
-        if ( $this->Mahasiswa_model->updateMahasiswa($data, $id) > 0)
-        {
+        if ($this->Mahasiswa_model->updateMahasiswa($data, $id) > 0) {
             $this->response([
-                    'status' => TRUE,
-                    'message' => 'mahasiswa has been updated'
-                ], REST_Controller::HTTP_NO_CONTENT);
+                'status' => TRUE,
+                'message' => 'mahasiswa has been updated'
+            ], REST_Controller::HTTP_NO_CONTENT);
         } else {
-             $this->response([
-                    'status' => FALSE,
-                    'message' => 'failed to update data !'
-                ], REST_Controller::HTTP_BAD_REQUEST);
+            $this->response([
+                'status' => FALSE,
+                'message' => 'failed to update data !'
+            ], REST_Controller::HTTP_BAD_REQUEST);
         }
     }
 }
